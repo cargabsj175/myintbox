@@ -74,6 +74,14 @@ class MyInternationalMailbox {
 			'my-international-mailbox-admin', // page
 			'my_international_mailbox_setting_section' // section
 		);
+
+		add_settings_field(
+			'country_3', // id
+			'Country', // title
+			array( $this, 'country_3_callback' ), // callback
+			'my-international-mailbox-admin', // page
+			'my_international_mailbox_setting_section' // section
+		);
 	}
 
 	public function my_international_mailbox_sanitize($input) {
@@ -88,6 +96,10 @@ class MyInternationalMailbox {
 
 		if ( isset( $input['aditional_info_2'] ) ) {
 			$sanitary_values['aditional_info_2'] = esc_textarea( $input['aditional_info_2'] );
+		}
+
+		if ( isset( $input['country_3'] ) ) {
+			$sanitary_values['country_3'] = $input['country_3'];
 		}
 
 		return $sanitary_values;
@@ -118,6 +130,17 @@ class MyInternationalMailbox {
 		);
 	}
 
+	public function country_3_callback() {
+		?> <select name="my_international_mailbox_option_name[country_3]" id="country_3">
+			<?php $selected = (isset( $this->my_international_mailbox_options['country_3'] ) && $this->my_international_mailbox_options['country_3'] === 'PA') ? 'selected' : '' ; ?>
+			<option value="PA" <?php echo $selected; ?>> Panamá</option>
+			<?php $selected = (isset( $this->my_international_mailbox_options['country_3'] ) && $this->my_international_mailbox_options['country_3'] === 'VE') ? 'selected' : '' ; ?>
+			<option value="VE" <?php echo $selected; ?>> Venezuela</option>
+			<?php $selected = (isset( $this->my_international_mailbox_options['country_3'] ) && $this->my_international_mailbox_options['country_3'] === 'US') ? 'selected' : '' ; ?>
+			<option value="US" <?php echo $selected; ?>> Estados Unidos</option>
+		</select> <?php
+	}
+
 }
 if ( is_admin() )
 	$my_international_mailbox = new MyInternationalMailbox();
@@ -128,4 +151,5 @@ if ( is_admin() )
  * $your_company_0 = $my_international_mailbox_options['your_company_0']; // Your Company
  * $address_mailbox_1 = $my_international_mailbox_options['address_mailbox_1']; // Address Mailbox
  * $aditional_info_2 = $my_international_mailbox_options['aditional_info_2']; // Aditional Info
+ * $country_3 = $my_international_mailbox_options['country_3']; // Country
  */

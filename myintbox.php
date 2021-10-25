@@ -7,7 +7,7 @@ if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get
 Plugin Name: My international mailbox
 Plugin URI: https://github.com/cargabsj175/
 Description: Convert your website in a international mailbox like libertyexpress
-Version: 0.1
+Version: 0.2
 Author: Carlos Sanchez
 Author URI: https://github.com/cargabsj175/
 Text Domain: myintbox
@@ -28,7 +28,7 @@ require_once MWC_ROOT . '/include/settings.php';
 // numero unico por usuario
 require_once MWC_ROOT . '/include/user.php';
 // snippets o personalizaciones
-require_once MWC_ROOT . '/include/myintbox_snippets.php';
+require_once MWC_ROOT . '/include/myintbox_functions.php';
 // configs del lado del Usuario
 require_once MWC_ROOT . '/include/myintbox_user_wc_tab.php';
 

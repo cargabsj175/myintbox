@@ -43,6 +43,7 @@ $my_international_mailbox_options = get_option( 'my_international_mailbox_option
 $your_company_0 = $my_international_mailbox_options['your_company_0']; // Your Company
 $address_mailbox_1 = $my_international_mailbox_options['address_mailbox_1']; // Address Mailbox
 $aditional_info_2 = $my_international_mailbox_options['aditional_info_2']; // Aditional Info
+$country_3 = $my_international_mailbox_options['country_3']; // Country
 // obtener valores de usuario
 global $current_user;
 get_currentuserinfo();
