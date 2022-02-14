@@ -52,8 +52,10 @@ $random_number = $current_user->random_number;
 echo "<h3>". $your_company_0, __(' Mailbox Info', 'myintbox' )."</h3>";
 
 echo "<h5>".__('General Info:', 'myintbox' )."</h5>";
-echo 'Dirección: '.$address_mailbox_1.'</br>';
-echo 'Información Adicional: '.$aditional_info_2.'</br>';
+echo 'Dirección de casillero: <strong>'.$address_mailbox_1.'</strong></br></br>';
+echo 'Información Adicional: '.html_entity_decode($aditional_info_2).'<br><br>';
+
+
 
 echo "<h5>".__('Personal Info:', 'myintbox' )."</h5>";
 echo ''.$your_company_0.' ID: <strong>'.$random_number.'</strong></br>';
