@@ -111,21 +111,21 @@ class MyInternationalMailbox {
 
 	public function your_company_0_callback() {
 		printf(
-			'<input class="regular-text" type="text" name="my_international_mailbox_option_name[your_company_0]" id="your_company_0" value="%s">',
+			'<input class="regular-text" type="text" name="my_international_mailbox_option_name[your_company_0]" id="your_company_0" placeholder="Your company name" value="%s">',
 			isset( $this->my_international_mailbox_options['your_company_0'] ) ? esc_attr( $this->my_international_mailbox_options['your_company_0']) : ''
 		);
 	}
 
 	public function address_mailbox_1_callback() {
 		printf(
-			'<input class="regular-text" type="text" name="my_international_mailbox_option_name[address_mailbox_1]" id="address_mailbox_1" value="%s">',
+			'<input class="regular-text" type="text" name="my_international_mailbox_option_name[address_mailbox_1]" id="address_mailbox_1" placeholder="Mailbox Address" value="%s">',
 			isset( $this->my_international_mailbox_options['address_mailbox_1'] ) ? esc_attr( $this->my_international_mailbox_options['address_mailbox_1']) : ''
 		);
 	}
 
 	public function aditional_info_2_callback() {
 		printf(
-			'<textarea class="large-text" rows="5" name="my_international_mailbox_option_name[aditional_info_2]" id="aditional_info_2">%s</textarea>',
+			'<textarea class="large-text" rows="5" name="my_international_mailbox_option_name[aditional_info_2]" id="aditional_info_2" placeholder="Write additional information, you can use html code.">%s</textarea>',
 			isset( $this->my_international_mailbox_options['aditional_info_2'] ) ? esc_attr( $this->my_international_mailbox_options['aditional_info_2']) : ''
 		);
 	}
